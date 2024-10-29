@@ -1,13 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golf Score</title>
-    <script src="style.css"></script>
-    <script src="main.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golf Scorecard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
 </head>
 <body>
-    
+  <div class="scorecard-container">
+    <h1>Golf Scorecard</h1>
+
+    <label for="tee-select">Select Tee: </label>
+    <select id="tee-select">
+      <option value="Men's">Men's</option>
+      <option value="Women's">Women's</option>
+      <option value="Pro">Pro</option>
+      <option value="Amateur">Amateur</option>
+    </select>
+
+    <table id="scorecard">
+      <thead>
+        <tr>
+          <th>Hole</th>
+          <th id="hole-1">1</th>
+          <th id="hole-2">2</th>
+          <th id="hole-3">3</th>
+          <th id="hole-4">4</th>
+          <th id="hole-5">5</th>
+          <th id="hole-6">6</th>
+          <th id="hole-7">7</th>
+          <th id="hole-8">8</th>
+          <th id="hole-9">9</th>
+          <th>Out</th>
+          <th id="hole-10">10</th>
+          <th id="hole-11">11</th>
+          <th id="hole-12">12</th>
+          <th id="hole-13">13</th>
+          <th id="hole-14">14</th>
+          <th id="hole-15">15</th>
+          <th id="hole-16">16</th>
+          <th id="hole-17">17</th>
+          <th id="hole-18">18</th>
+          <th>In</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Par</td>
+          <td id="par-1"></td>
+          <td id="par-2"></td>
+          <td id="par-3"></td>
+          <td id="par-4"></td>
+          <td id="par-5"></td>
+          <td id="par-6"></td>
+          <td id="par-7"></td>
+          <td id="par-8"></td>
+          <td id="par-9"></td>
+          <td id="out-par"></td>
+          <td id="par-10"></td>
+          <td id="par-11"></td>
+          <td id="par-12"></td>
+          <td id="par-13"></td>
+          <td id="par-14"></td>
+          <td id="par-15"></td>
+          <td id="par-16"></td>
+          <td id="par-17"></td>
+          <td id="par-18"></td>
+          <td id="in-par"></td>
+          <td id="total-par"></td>
+        </tr>
+
+        <tr>
+          <td><input type="text" placeholder="Player 1"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-1"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-2"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-3"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-4"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-5"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-6"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-7"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-8"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-9"></td>
+          <td id="p1-out"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-10"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-11"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-12"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-13"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-14"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-15"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-16"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-17"></td>
+          <td><input type="number" class="hole-score" id="p1-hole-18"></td>
+          <td id="p1-in"></td>
+          <td id="p1-total"></td>
+        </tr>
+
+        <tr>
+            <td><input type="text" placeholder="Player 2"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-1"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-2"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-3"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-4"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-5"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-6"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-7"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-8"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-9"></td>
+            <td id="p2-out"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-10"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-11"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-12"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-13"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-14"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-15"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-16"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-17"></td>
+            <td><input type="number" class="hole-score" id="p2-hole-18"></td>
+            <td id="p2-in"></td>
+            <td id="p2-total"></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
 </body>
 </html>
